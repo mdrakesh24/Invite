@@ -590,6 +590,9 @@ body.invitation-opened .hero {
   margin: 0 0 4px;
   color: var(--coral);
   font: 36px/1 var(--script);
+  font-weight: 600;
+  letter-spacing: 2px;
+  word-spacing: 4px;
 }
 .welcome h2,
 .events h2,
@@ -609,7 +612,7 @@ body.invitation-opened .hero {
 .welcome-copy {
   max-width: 350px;
   padding-bottom: 5px;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 16px;
 }
 .welcome-copy p {
@@ -716,6 +719,24 @@ body.invitation-opened .hero {
   font-size: 15px;
   line-height: 1.7;
 }
+.couple-dialog-copy:last-child {
+  margin-bottom: 0;
+}
+.couple-portrait-frame {
+  width: 160px;
+  height: 190px;
+  margin: 0 auto 22px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(44, 29, 29, 0.2);
+}
+.couple-portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .couple-dialog-details {
   padding-top: 18px;
   border-top: 1px solid var(--line);
@@ -743,7 +764,7 @@ body.invitation-opened .hero {
 .schedule-kicker {
   margin: 0 0 8px;
   color: var(--coral);
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 600;
 }
 .schedule-heading h2 {
@@ -846,7 +867,9 @@ body.invitation-opened .hero {
 }
 .event-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1050px;
+  margin-inline: auto;
   gap: 14px;
 }
 .event-card {
@@ -920,9 +943,10 @@ body.invitation-opened .hero {
 #details .section-heading {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: center;
   gap: 32px;
   margin-bottom: 62px;
+  text-align: center;
 }
 #details .section-heading h2 {
   color: var(--ink);
@@ -1241,6 +1265,12 @@ footer {
   background: var(--ink);
   color: white;
 }
+.site-disclaimer {
+  display: block;
+  padding: 12px clamp(22px, 8vw, 130px);
+  background: var(--ink);
+  color: white;
+}
 .footer-brand {
   font-size: 18px;
 }
@@ -1248,6 +1278,7 @@ footer {
   font-size: 20px;
 }
 .footer-brand + p,
+.footer-rights,
 footer > a {
   color: rgba(255, 255, 255, 0.52);
   font-size: 10px;
@@ -1264,6 +1295,12 @@ footer > a {
   background: var(--paper);
   color: var(--ink);
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+}
+.couple-dialog {
+  border-radius: 10px;
+}
+.couple-dialog[open] {
+  animation: rise 0.9s ease both;
 }
 .rsvp-dialog::backdrop {
   background: rgba(17, 31, 35, 0.7);
@@ -1402,8 +1439,9 @@ footer > a {
   .hero h1 em {
     display: block;
     margin: 8px 0;
-    font-size: 0.72em;
-    color: #d76a7b;
+    font-weight: 600;
+    font-size: 0.80em;
+    text-shadow: 0 1px 0 rgba(255, 253, 249, 0.95), 0 2px 8px rgba(255, 253, 249, 0.7);
   }
   .hero-rule {
     margin: 18px 0 24px;
